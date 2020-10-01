@@ -1,0 +1,318 @@
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX       GLOBAL     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Parie 1 : global (redefinition de balises)*/
+/*=======   BOX SIZING  pour retirer heritage marges et padding  =============*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; /* ---  valeur habituelle  ---*/
+}
+body{
+    padding: 0;
+    font-size: 1.6rem;
+}
+a{
+    text-decoration: none;
+}
+
+img, nav button{
+    width: 100%;
+}
+
+body, #cendrars{
+    margin: 0 auto;
+}
+
+
+/*------------   font family  et font size    ------------*/
+body, a, i, footer{
+    font-family: 'Open Sans', 'Sans Serif';
+}
+
+header nav, nav button{
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'David Libre', serif;
+}
+
+
+
+
+nav button, #cendrars{
+    display: block;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX     LAYOUT     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Partie 2 : Layout (definition des éléments de structures)*/
+
+section{
+    padding: 10px 0;
+}
+
+
+
+
+main, nav, footer{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+
+iframe{
+    background-color: white;
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX     MODULE    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Partie 3 : module (definition des éléments internes)*/
+
+/*------------   HEADER      ------------*/
+header{
+    margin: 0 auto;
+}
+
+header, footer{
+    text-align: center;
+}
+
+header > a{
+    background-color: white;
+    display: block;
+    width: 280px;
+    height: 160px;
+    margin: 30px auto 5px auto;
+}
+
+header > a img{
+    width: 138px;
+}
+
+
+nav ul{
+    list-style: none;
+    text-align: left;
+}
+
+nav a, nav button a{
+    padding: 10px;
+    border-bottom: solid rgb(224, 215, 201) 1px;
+    display: block;
+    text-indent: 10px;
+}
+
+nav button{
+    border: none;
+    text-align: left;
+}
+
+header > a img{
+    max-width: 138px;
+}
+
+
+/*------------   MAIN      ------------*/
+
+
+#covid img{
+    border: solid grey 2px;
+}
+
+
+#laicite{
+    width: 100%;
+    width: 400px;
+    border: 10px;
+}
+
+#cendrars{
+    width: 138px;
+}
+/*------------   FOOTER      ------------*/
+
+footer article{
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX     THEME     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Parie 4 : theme (definition des couleurs et background)    */
+
+body{
+    background-color: rgb(224,115,44);
+}
+main{
+    background-color: white;
+}
+header > nav{
+    background-color: rgba(244,244,244,0.9);
+}
+
+nav a{
+    color: rgb(234,146,36);
+}
+
+header > nav > ul > li > a, nav button{
+    background-color: rgb(224, 215, 201);
+}
+
+footer, footer a, header p{
+    color: white;
+}
+
+/*nav li[nav]{
+    background-color: rgb(224, 215, 201);
+}*/
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX    ETAT     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Partie 5 : état (definition des élémentS qui ont un état spécifique ou un changement d'état)*/
+
+.next-showHide{
+    display: none;
+}
+
+
+.show{
+    display: block;
+}
+
+
+
+
+
+
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXX     MEDIA QUERIES     XXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/*XXXXXXXXXXXXXXXXX   TABLETTE  XXXXXXXXXXXXXXXXXXXXXX*/
+@media screen and (min-width: 980px){
+    header .toggle-button, header nav ul li button ~ nav{
+        display: none;
+    }
+
+    header{
+        position: absolute;
+        left: 0;
+        width: 190px;
+    }
+
+
+    header > a{
+    width: 138px;
+    height: 320px;
+    margin: 0 auto 5px auto;
+    }
+
+    header > a img{
+        display: block;
+    }
+
+    header > p{
+        margin: 10px;
+    }
+
+
+    main{
+        margin: 20px 20px 0 200px;
+    }
+
+    /*header > ul > li > button{
+        display: inline-block;
+    }*/
+
+    header nav{
+        padding: 0;    
+    }
+
+     .next-showHide{
+        display: block;
+        align-items: center;
+    }
+
+    header > nav > ul{
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+
+    }
+
+    .nav-button{
+        background-color: transparent;
+        height: 80px;
+        margin: 20px 0.2rem;
+        /*padding: 1rem auto;*/
+
+    }
+
+    .nav-button a::after{
+        content: '\f105';
+        font-family: FontAwesome;
+        position: absolute;
+        right: 15px;
+        font-weight: normal;
+        font-style: normal;
+        /*margin:0px 0px 0px 10px;*/
+        text-decoration:none;
+    }
+
+
+
+
+    header .nav-button a{
+        /*height: 60px;*/
+        padding: 0;
+        border-bottom: none;
+    }
+
+   
+
+    .next-showHide li{
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+
+    header > nav > ul{
+        
+    }
+
+
+    nav a, nav button a{
+        text-indent: 0;
+    }
+
+
+
+    header nav ul li:hover .nav-button + nav{
+        display: inline-block;
+        margin-inline-start: 0;
+        background-color: rgba(242,230,221);
+        /*left:182px;
+        opacity:1;*/
+        width:276px; 
+        transition:1s left,1s width,1s opacity;
+
+    }
+/*
+    .nav-button a:hover .nav-button + nav{
+        display: block;
+        left:182px;opacity:1;width:276px; 
+        transition:1s left,1s width,1s opacity;
+    }*/
+
+
+}
+
